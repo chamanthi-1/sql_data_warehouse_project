@@ -7,6 +7,12 @@ this stored procedure loads data into the 'bronze' schema from external CSV file
 It performs following actions:
 truncates the bronze tables before loading the data.
 Uses the 'BULK INSERT' command load  data from csv files to Bronze tables
+
+Parameters:
+None.
+the stored procedure does not accept any parameters or return any values.
+USAGE EXAMPLE:
+EXEC bronze.load_bronze.
 */
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
