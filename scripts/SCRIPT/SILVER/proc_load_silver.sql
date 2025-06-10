@@ -1,18 +1,19 @@
 /*
 =================================================
-STORED PROCEDURE: LOAD BRONZE LAYER (Source--> Bronze)
+STORED PROCEDURE: LOAD BRONZE LAYER (Bronze--> Silver)
 ==============================================
 Script Purpose:
-this stored procedure loads data into the 'bronze' schema from external CSV files.
-It performs following actions:
-truncates the bronze tables before loading the data.
-Uses the 'BULK INSERT' command load  data from csv files to Bronze tables
+this stored procedure performs the ETL(Extract,Transfer,Load) process to 
+populate the 'SILVER' schema TABLES from BRONZE SCHEMA.
+ACTIONS PERFORMED:
+truncates the SILVERtables before loading the data.
+INSERTS TRANSFORMED AND CLEANED DATA from BRONZE to SILVER tables
 
 Parameters:
 None.
 the stored procedure does not accept any parameters or return any values.
 USAGE EXAMPLE:
-EXEC bronze.load_bronze.
+EXEC silver.load_silver.
 */
 CREATE OR ALTER PROCEDURE SILVER.LOAD_SILVER AS
 	BEGIN
